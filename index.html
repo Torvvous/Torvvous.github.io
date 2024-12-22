@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JavaScript Quiz</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="script.js" defer></script> -->
+  </head>
+
+  <body class="flex flex-col container mx-auto px-20 m-16">
+    <h1 class="mx-8 my-16 text-5xl font-medium">
+      Bun venit utilizator de pe dispozitivul <span id="OSdetails"></span>, ai
+      fost ales pentru acest test.
+    </h1>
+
+    <h2 class="ml-32 text-2xl underline font-medium tracking-wide">
+      Regulile jocului
+    </h2>
+    <ul class="flex flex-col list-disc mx-auto">
+      <li class="my-2 mx-32 text-xl">
+        Aceasta aplicatie este un quiz/survey/questionnaire cu un total de 50 de
+        intrebari.
+      </li>
+      <li class="my-2 mx-32 text-xl">
+        Fiecare intrebare are 4 optiuni de raspuns, insa doar una este corecta.
+      </li>
+      <li class="my-2 mx-32 text-xl">
+        Daca se reincepe aplicatia, intrebarile se vor repeta, insa vor aparea
+        in mod aleatoriu, de asemenea optiunile de raspuns vor fi in ordine
+        aleatorie.
+      </li>
+      <li class="my-2 mx-32 text-xl">
+        Jocul se afla sub presiunea unui timer de 30 minute, o data ce se scurge
+        timpul, aplicatia se va reseta si va trebui sa reincepi. Deci, ar fi
+        bine sa nu memorezi raspunsurile.
+      </li>
+      <li class="my-2 mx-32 text-xl">
+        O data ce alegi un raspuns corect, acesta iti va garanta un caracter
+        special. Caracterul special poate fi de 2 tipuri: util (diferit de null,
+        caracterul poate fi un numar sau un string sau o combinatie, sub forma
+        unui string) sau inutil (null). Doar cel util conteaza. Asta inseamna un
+        lucru important: unele intrebari conteaza, altele NU.
+      </li>
+      <li class="my-2 mx-32 text-xl">
+        Pentru a gasi caracterul special, trebuie mai intai sa raspunzi corect,
+        apoi sa il cauti in inspectorul browser-ului (prin right click "inspect"
+        sau F12). Apoi il cauti la consola, o sa fie un element "span". La acest
+        element, va trebui sa ii cauti proprietatea de "special", acolo se va
+        afla caracterul special.
+      </li>
+      <li class="my-2 mx-32 text-xl">
+        Caracterul special gasit trebuie introdus intr-o caseta de input care va
+        fi pe ecran
+      </li>
+      <li class="my-2 mx-32 text-xl">
+        Este crucial sa gasesti toate caracterele speciale (adica sa raspunzi
+        corect la anumite intrebari care detin acele caractere) pentru a trece
+        la etapa finala. Pentru etapa finala vei primi alte instructiuni
+      </li>
+      <li class="my-2 mx-32 text-xl">
+        Daca insa pierzi la multe intrebari, ai la dispozitie un buton de
+        resetare care reincepe aplicatia.
+      </li>
+      <li class="my-2 mx-32 text-xl">
+        Ar fi bine sa nu incerci sa trisezi. :)
+      </li>
+    </ul>
+
+    <h2 class="flex justify-center items-center my-8 text-2xl font-medium">
+      Esti pregatit sa pornesti aplicatia?
+    </h2>
+    <button
+      class="flex mx-auto px-6 py-4 tracking-wider border-8 border-slate-300 hover:border-slate-400"
+      id="btnAccept"
+    >
+      <a href="aplicatie.html">Confirma</a>
+    </button>
+
+    <h2 class="flex justify-center items-center text-2xl font-extrabold my-8">
+      Mult noroc!
+    </h2>
+
+    <!-- test -->
+    <!--  <button onclick="version()">Return Browser Version</button>
+
+    <p id="BrowserVersion"></p> -->
+
+    <script>
+      var v = navigator.appVersion;
+      document.getElementById("OSdetails").innerHTML = v;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JavaScript Quiz</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="module" src="script.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="flex flex-col container mx-auto px-20 m-20">
+    <div class="flex justify-center items-center text-5xl mb-24" id="f1"></div>
+
+    <div class="message text-xl"></div>
+    <div class="que flex flex-col space-y-6 font-medium">
+      Asteapta o secunda...
+    </div>
+    <div class="next"></div>
+
+    <h1 class="mt-16 mb-4 text-xl font-medium">
+      Noteaza caracterele speciale gasite
+    </h1>
+    <div class="flex w-full max-w-sm min-w-[200px]">
+      <input
+        class="w-full bg-transparent placeholder:text-slate-800 text-slate-700 text-sm border-2 border-slate-400 px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+        id="specialUserInput"
+        type="text"
+        placeholder="Poti incerca aici..."
+      />
+      <button
+        class="tracking-wider border-8 px-2 border-slate-300 hover:border-slate-400"
+        id="specialInput"
+      >
+        Confirma
+      </button>
+    </div>
+
+    <br />
+    <div class="flex">
+      <span class="text-lime-500" hidden id="ch3" class="special"></span>
+      <span class="text-lime-500" hidden id="ch4" class="special"></span>
+      <span class="text-lime-500" hidden id="ch5" class="special"></span>
+      <span class="text-lime-500" hidden id="ch6" class="special"></span>
+      <span class="text-lime-500" hidden id="ch7" class="special"></span>
+      <span class="text-lime-500" hidden id="ch8" class="special"></span>
+      <span class="text-red-500" hidden id="ch9" class="special"></span>
+      <span class="text-red-500" hidden id="ch10" class="special"></span>
+      <span class="text-red-500" hidden id="ch11" class="special"></span>
+      <span class="text-red-500" hidden id="ch12" class="special"></span>
+      <span class="text-red-500" hidden id="ch13" class="special"></span>
+      <span class="text-red-500" hidden id="ch14" class="special"></span>
+      <span class="text-red-500" hidden id="ch15" class="special"></span>
+      <span class="text-red-500" hidden id="ch16" class="special"></span>
+      <span class="text-red-500" hidden id="ch17" class="special"></span>
+      <span class="text-lime-500" hidden id="ch18" class="special"></span>
+      <span class="text-red-500" hidden id="ch19" class="special"></span>
+      <span class="text-red-500" hidden id="ch20" class="special"></span>
+      <span class="text-red-500" hidden id="ch21" class="special"></span>
+      <span class="text-red-500" hidden id="ch22" class="special"></span>
+      <span class="text-red-500" hidden id="ch23" class="special"></span>
+      <span class="text-red-500" hidden id="ch24" class="special"></span>
+      <span class="text-red-500" hidden id="ch25" class="special"></span>
+      <span class="text-red-500" hidden id="ch26" class="special"></span>
+      <span class="text-red-500" hidden id="ch27" class="special"></span>
+      <span class="text-red-500" hidden id="ch28" class="special"></span>
+      <span class="text-red-500" hidden id="ch29" class="special"></span>
+      <span class="text-red-500" hidden id="ch31" class="special"></span>
+      <span class="text-red-500" hidden id="ch32" class="special"></span>
+      <span class="text-cyan-500" hidden id="ch36" class="special"></span>
+      <span class="text-cyan-500" hidden id="ch37" class="special"></span>
+      <span class="text-cyan-500" hidden id="ch38" class="special"></span>
+      <span class="text-cyan-500" hidden id="ch39" class="special"></span>
+      <span class="text-cyan-500" hidden id="ch40" class="special"></span>
+      <span class="text-cyan-500" hidden id="ch43" class="special"></span>
+    </div>
+
+    <div id="nullAnnouncement"></div>
+
+    <button
+      id="resetButton"
+      class="my-6 px-6 py-4 tracking-wider border-8 border-slate-300 hover:border-slate-400 uppercase"
+    >
+      Reseteaza
+    </button>
+
+    <br />
+    <div hidden id="finalInputWrapper">
+      <h1 class="text-2xl">Inputul final</h1>
+      <div class="text-xl">
+        Acum caracterele speciale trebuiesc convertite (cele verzii: hexazecimal
+        -> text, cele albastre: binar -> numere zecimale, cele rosii: octal ->
+        text, cele rosii au un hint de asemena o data ce sunt convertite la
+        text)
+      </div>
+      <div class="flex w-full max-w-sm min-w-[200px]">
+        <input
+          class="w-full bg-transparent placeholder:text-slate-800 text-slate-700 text-sm border-2 border-slate-400 px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+          id="finalUserInput"
+          type="text"
+          placeholder="Poti incerca aici..."
+        />
+        <button
+          class="tracking-wider border-8 px-2 border-slate-300 hover:border-slate-400"
+          id="finalInput"
+        >
+          Confirma
+        </button>
+      </div>
+
+      <div inert id="displayFinal"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+.next {
+  font-size: 1em;
+  background-color: lightcyan;
+  width: 300px;
+  margin: 20px 0;
+  padding: 10px;
+  display: none;
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-block;
+  padding: 5px;
+  font-family: sans-serif;
+  border-radius: 10px;
+  font-size: 1.5em;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.answer {
+  border: 5px solid #ddd;
+  padding: 5px 20px;
+}
+
+.answer:hover {
+  background-color: beige;
+  border: 5px solid red;
+}
+
+.question {
+  /* display: block; */
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* .que {
+  display: flex;
+  flex-direction: column;
+} */
